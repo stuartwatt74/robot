@@ -17,7 +17,7 @@ namespace Robot
         public void Configuration(IAppBuilder app)
         {
             String root = AppDomain.CurrentDomain.BaseDirectory;
-            root = root.Substring(0, root.IndexOf("\\bin"));
+            root = root.Substring(0, root.IndexOf("bin") - 1);
 
             // Now with a default home page
             var physicalFileSystem = new PhysicalFileSystem(root);

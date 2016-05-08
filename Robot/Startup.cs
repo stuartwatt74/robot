@@ -19,6 +19,8 @@ namespace Robot
             String root = AppDomain.CurrentDomain.BaseDirectory;
             root = root.Substring(0, root.IndexOf("bin") - 1);
 
+            Console.WriteLine(root);
+
             // Now with a default home page
             var physicalFileSystem = new PhysicalFileSystem(root);
             var options = new FileServerOptions

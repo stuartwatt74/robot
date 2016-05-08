@@ -1,0 +1,29 @@
+﻿<!--<div>{{home.time.Hour}}:{{home.time.Minute}}:{{home.time.Second}}</div>-->
+
+<!--<div>{{home.model.Date | date:'HH:mm:ss'}}</div>
+
+<button type="button" class="btn btn-default" ng-click="home.reset()">Test</button>-->
+
+<div class="row" style="margin-top:10px;">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Dashboard
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div style="width:150px;overflow-wrap:normal;float:left;">System Time</div>
+                        <div style="width:150px;overflow-wrap:normal;float:left;">{{home.model.Date | date:'dd/MM/yyyy HH:mm:ss'}}</div>
+                    </div>                    
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div style="width:150px;overflow-wrap:normal;float:left;">Url</div>
+                        <div style="width:150px;overflow-wrap:normal;float:left;">{{home.model.Url}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

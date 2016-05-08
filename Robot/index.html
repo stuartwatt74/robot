@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html ng-app="app" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Robot</title>
+
+    <!-- Bootstrap, jQuery, Angular, UIRouter, FontAwesome, UI-Bootstrap, SignalR -->
+    <!--<link href="Content/bootstrap.min.css" rel="stylesheet">-->
+    <link href="content/slate/bootstrap.min.css" rel="stylesheet" />
+    <!--<link href="content/superhero/bootstrap.min.css" rel="stylesheet" />-->
+    <!--<link href="content/yeti/bootstrap.min.css" rel="stylesheet" />-->
+    <script src="scripts/jquery-2.2.3.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/angularui/ui-router.min.js"></script>
+    <link href="content/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="scripts/ui-bootstrap-tpls-1.3.2.min.js"></script>
+    <script src="scripts/jquery.signalr-2.2.0.min.js"></script>
+    <script src="signalr/hubs"></script>
+
+    <script src="app/app.module.js"></script>
+
+    <script src="app/shared/hub.service.js"></script>
+
+    <script src="app/nav/nav.controller.js"></script>
+    <script src="app/home/home.controller.js"></script>
+    <script src="app/manual/manual.controller.js"></script>
+    <script src="app/program/program.controller.js"></script>
+    <script src="app/settings/settings.controller.js"></script>    
+
+</head>
+<body>
+
+    <div ng-controller="NavController as nav">
+        <uib-tabset active="active">
+            <uib-tab index="0" select="nav.selectState('home')">
+                <uib-tab-heading>
+                    <i class="fa fa-home"></i>
+                </uib-tab-heading>
+            </uib-tab>
+            <uib-tab index="1" select="nav.selectState('manual')">
+                <uib-tab-heading>
+                    <i class="fa fa-compass"></i>
+                </uib-tab-heading>
+            </uib-tab>
+            <uib-tab index="2" select="nav.selectState('program')">
+                <uib-tab-heading>
+                    <i class="fa fa-code"></i>
+                </uib-tab-heading>
+            </uib-tab>
+            <uib-tab index="3" select="nav.selectState('settings')">
+                <uib-tab-heading>
+                    <i class="fa fa-cog"></i>
+                </uib-tab-heading>
+            </uib-tab>
+        </uib-tabset>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div ui-view></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

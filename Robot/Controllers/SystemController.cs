@@ -23,12 +23,14 @@ namespace Robot.Controllers
 
         public SystemController()
         {
+            Console.WriteLine("**** 1 ****");
             HostingEnvironment.RegisterObject(this);
-
+            Console.WriteLine("**** 2 ****");
             _taskTimer = new Timer(OnTimerElapsed, null,
                 TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(.1));
-
+            Console.WriteLine("**** 3 ****");
             _startTime = DateTime.Now;
+            Console.WriteLine("**** 4 ****");
         }
 
         public static ISystemController Instance

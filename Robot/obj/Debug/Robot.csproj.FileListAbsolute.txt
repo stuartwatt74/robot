@@ -71,3 +71,4 @@ C:\Code\Robot\Robot\bin\Debug\System.Web.Http.Owin.xml
 C:\Code\Robot\Robot\bin\Debug\System.Web.Http.WebHost.xml
 C:\Code\Robot\Robot\obj\Debug\Robot.exe
 C:\Code\Robot\Robot\obj\Debug\Robot.pdb
+C:\Code\Robot\Robot\obj\Debug\Robot.csprojResolveAssemblyReference.cache

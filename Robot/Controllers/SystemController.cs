@@ -23,14 +23,12 @@ namespace Robot.Controllers
 
         public SystemController()
         {
-            Console.WriteLine("**** 1 ****");
-            HostingEnvironment.RegisterObject(this);
-            Console.WriteLine("**** 2 ****");
+            HostingEnvironment.RegisterObject(this);            
+
             _taskTimer = new Timer(OnTimerElapsed, null,
                 TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(.1));
-            Console.WriteLine("**** 3 ****");
+
             _startTime = DateTime.Now;
-            Console.WriteLine("**** 4 ****");
         }
 
         public static ISystemController Instance
@@ -66,7 +64,7 @@ namespace Robot.Controllers
 
         protected void BroadcastMessage(IDisplayModel message)
         {
-            if(_hub.Clients != null)
+            if(_hub != null && _hub.Clients != null && message != null)
                 _hub.Clients.All.broadcastMessage(message);
         }
 

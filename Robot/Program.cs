@@ -12,9 +12,12 @@ namespace Robot
     {
         static void Main(string[] args)
         {
-            //string baseAddress = "http://localhost:40807/";
+            string baseAddress = "http://*:40807/";
 
-            string baseAddress = ConfigurationManager.AppSettings["baseUrl"];
+            if(Environment.OSVersion.Platform == PlatformID.Win32NT)
+                baseAddress = "http://localhost:40807/";
+
+            //string baseAddress = ConfigurationManager.AppSettings["baseUrl"];
 
             using (WebApp.Start<Startup>(url: baseAddress))
             {
